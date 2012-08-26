@@ -8,7 +8,7 @@ int main(int argc, const char *argv[])
 	struct FileInfo info;
 
 	//resolvePath
-
+	printf("hello download\n");
 	if (argc < 2) {
 		fprintf(stderr, "Usage: %s <cmd http://xxx.xxx.xxx.xxx/filename>", argv[1]);
 		return -1;
