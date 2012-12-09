@@ -192,7 +192,6 @@ printf("%s() line = %d\n", __func__, __LINE__);
 		}
 		info->downSize += ret;
 		write(info->fdFile, buf, ret);
-		printf("j = %d~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n", j++);
 		printf("%s\n", buf);
 	}
 		while (info->buffSize - info->buffUsed < ret);
@@ -234,7 +233,6 @@ void * download(void *p)
 
 		info->downSize += ret;
 		write(info->fdFile, buf, ret);
-		printf("i = %d~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n", i++);
 		printf("%s\n", buf);
 	}
 
@@ -255,10 +253,8 @@ void * download(void *p)
 //		info->readSize %= info->fileSize;
 //	}
 //	info->buffUsed -= size;
-//	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 //	printf("%s\n", buf);
 //	ret = write(info->fdFile, buf, size);
-//	printf("%s() line = %d\n", __func__, __LINE__);
 //	if (ret < 0) {
 //		perror("write1");
 //		return -1;
@@ -275,7 +271,6 @@ void * download(void *p)
 //	int ret, fd, reconnect = 0;
 //	char request[RES_LEN];
 //	struct sockaddr_in serverAddr;
-//printf("%s() line = %d", __func__, __LINE__);
 //	fd = info->fdSocket;
 //	while (1) {
 //		info->readSize = 0;
@@ -308,7 +303,6 @@ void * download(void *p)
 //			reconnect = 1;
 //			continue;
 //		}
-//printf("%s() line = %d", __func__, __LINE__);
 //		if (reconnect) {
 //			ret = getHttpHead(info);
 //			if (ret < 0) {
@@ -333,7 +327,6 @@ void * download(void *p)
 //	}
 //	return NULL;
 //}
-
 
 //int readTimeOut(int fd, int sec)
 //{
